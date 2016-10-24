@@ -1,0 +1,35 @@
+# See also:
+#     https://docs.python.org/2/distutils/sourcedist.html#commands
+#     https://docs.python.org/distutils/commandref.html#sdist-cmd
+
+# Project specific #
+####################
+include MANIFEST.in
+#include INSTALL
+include README
+#include TODO
+include *.spec.in
+include etc/pluginguard/plugin_guard.cfg
+include var/log/plugin_guard/plugin_guard.log
+# graft data
+graft etc
+
+# Backup files #
+################
+#global-exclude *~
+#global-exclude *.old
+#global-exclude *.bak
+#global-exclude *.new
+#global-exclude *.orig
+#global-exclude *.save
+
+# OS generated files #
+######################
+#global-exclude .DS_Store*
+#global-exclude ehthumbs.db
+#global-exclude Icon?
+#global-exclude Thumbs.db
+
+# Git exclude files #
+#####################
+global-exclude .gitignore
